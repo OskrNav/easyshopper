@@ -14,6 +14,9 @@
 		BB6F580F27D68BB000C19115 /* easyShopperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F580E27D68BB000C19115 /* easyShopperTests.swift */; };
 		BB6F581927D68BB000C19115 /* easyShopperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F581827D68BB000C19115 /* easyShopperUITests.swift */; };
 		BB6F581B27D68BB000C19115 /* easyShopperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F581A27D68BB000C19115 /* easyShopperUITestsLaunchTests.swift */; };
+		BB6F582B27D69B9700C19115 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = BB6F582A27D69B9700C19115 /* Stinsen */; };
+		BB6F582E27D69D2900C19115 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = BB6F582D27D69D2900C19115 /* CombineMoya */; };
+		BB6F583027D69D2900C19115 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = BB6F582F27D69D2900C19115 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6F582E27D69D2900C19115 /* CombineMoya in Frameworks */,
+				BB6F582B27D69B9700C19115 /* Stinsen in Frameworks */,
+				BB6F583027D69D2900C19115 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,8 @@
 		BB6F57FC27D68BAD00C19115 /* easyShopper */ = {
 			isa = PBXGroup;
 			children = (
+				BB6F582827D6930C00C19115 /* Coordinator */,
+				BB6F582727D6930500C19115 /* network */,
 				BB6F57FD27D68BAD00C19115 /* easyShopperApp.swift */,
 				BB6F57FF27D68BAD00C19115 /* ContentView.swift */,
 				BB6F580127D68BAF00C19115 /* Assets.xcassets */,
@@ -127,6 +135,20 @@
 			path = easyShopperUITests;
 			sourceTree = "<group>";
 		};
+		BB6F582727D6930500C19115 /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		BB6F582827D6930C00C19115 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +165,11 @@
 			dependencies = (
 			);
 			name = easyShopper;
+			packageProductDependencies = (
+				BB6F582A27D69B9700C19115 /* Stinsen */,
+				BB6F582D27D69D2900C19115 /* CombineMoya */,
+				BB6F582F27D69D2900C19115 /* Moya */,
+			);
 			productName = easyShopper;
 			productReference = BB6F57FA27D68BAD00C19115 /* easyShopper.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +242,10 @@
 				Base,
 			);
 			mainGroup = BB6F57F127D68BAD00C19115;
+			packageReferences = (
+				BB6F582927D69B9700C19115 /* XCRemoteSwiftPackageReference "stinsen" */,
+				BB6F582C27D69D2900C19115 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = BB6F57FB27D68BAD00C19115 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -579,6 +610,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB6F582927D69B9700C19115 /* XCRemoteSwiftPackageReference "stinsen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rundfunk47/stinsen";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		BB6F582C27D69D2900C19115 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB6F582A27D69B9700C19115 /* Stinsen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6F582927D69B9700C19115 /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
+		};
+		BB6F582D27D69D2900C19115 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6F582C27D69D2900C19115 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		BB6F582F27D69D2900C19115 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB6F582C27D69D2900C19115 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB6F57F227D68BAD00C19115 /* Project object */;
 }
