@@ -17,6 +17,9 @@
 		BB6F582B27D69B9700C19115 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = BB6F582A27D69B9700C19115 /* Stinsen */; };
 		BB6F582E27D69D2900C19115 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = BB6F582D27D69D2900C19115 /* CombineMoya */; };
 		BB6F583027D69D2900C19115 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = BB6F582F27D69D2900C19115 /* Moya */; };
+		BB6F583227D69E7200C19115 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F583127D69E7200C19115 /* AppCoordinator.swift */; };
+		BBDC3AF627D8190E00365CA6 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3AF527D8190E00365CA6 /* mainView.swift */; };
+		BBDC3AF827D81B4900365CA6 /* itemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3AF727D81B4900365CA6 /* itemDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		BB6F581427D68BB000C19115 /* easyShopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = easyShopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6F581827D68BB000C19115 /* easyShopperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = easyShopperUITests.swift; sourceTree = "<group>"; };
 		BB6F581A27D68BB000C19115 /* easyShopperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = easyShopperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB6F583127D69E7200C19115 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BBDC3AF527D8190E00365CA6 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
+		BBDC3AF727D81B4900365CA6 /* itemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 		BB6F57FC27D68BAD00C19115 /* easyShopper */ = {
 			isa = PBXGroup;
 			children = (
+				BBDC3AF327D818EC00365CA6 /* Presenter */,
 				BB6F582827D6930C00C19115 /* Coordinator */,
 				BB6F582727D6930500C19115 /* network */,
 				BB6F57FD27D68BAD00C19115 /* easyShopperApp.swift */,
@@ -145,8 +152,26 @@
 		BB6F582827D6930C00C19115 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BB6F583127D69E7200C19115 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BBDC3AF327D818EC00365CA6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC3AF427D818F300365CA6 /* Main */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BBDC3AF427D818F300365CA6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC3AF527D8190E00365CA6 /* mainView.swift */,
+				BBDC3AF727D81B4900365CA6 /* itemDetailView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,8 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6F583227D69E7200C19115 /* AppCoordinator.swift in Sources */,
+				BBDC3AF627D8190E00365CA6 /* mainView.swift in Sources */,
 				BB6F580027D68BAD00C19115 /* ContentView.swift in Sources */,
 				BB6F57FE27D68BAD00C19115 /* easyShopperApp.swift in Sources */,
+				BBDC3AF827D81B4900365CA6 /* itemDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
