@@ -23,7 +23,7 @@ final class AppCoordinator: NavigationCoordinatable {
     }
     
     @ViewBuilder func makeProductView() -> some View {
-        ProductsView()
+        ProductsView(viewModel: productsViewModel())
     }
     
     @ViewBuilder func makeDetailView() -> some View {

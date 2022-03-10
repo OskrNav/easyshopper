@@ -29,12 +29,17 @@ protocol NetworkingCombineRequesterType {
 
 
 extension NetworkingCombineRequesterType {
+    func execute<T: Decodable>(request: NetworkingRequestType, using decoder: JSONDecoder = .init()) -> AnyPublisher<T, Error> {
+        execute(request: request)
+            .map(\.data)
+            .tryMap { try decoder.decode(T.self, from: $0) }
+            .eraseToAnyPublisher()
+    }
 
     func execute<T: Decodable>(request: NetworkingRequestType, using decoder: JSONDecoder = .init()) -> AnyPublisher<DecodedResponse<T>, Error> {
         execute(request: request)
             .tryMap { try DecodedResponse(object: decoder.decode(T.self, from: $0.data), httpResponse: $0.httpResponse)  }
             .eraseToAnyPublisher()
-            
     }
 
     func execute(request: NetworkingRequestType) -> AnyPublisher<HTTPURLResponse?, Error> {

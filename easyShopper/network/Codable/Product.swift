@@ -7,7 +7,29 @@
 
 import Foundation
 
-struct Product {
-    var name: String
-    var image: String
+struct ProductsValue: Codable {
+    let barcode, productsDescription, id: String
+    let imageURL: String
+    let name: String
+    let retailPrice: Int
+    let costPrice: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case barcode
+        case productsDescription = "description"
+        case id
+        case imageURL = "image_url"
+        case name
+        case retailPrice = "retail_price"
+        case costPrice = "cost_price"
+    }
 }
+
+struct ProductRepresentable: Codable, Hashable {
+    let barcode, id: String
+    let imageURL: String
+    let name: String
+    let costPrice: Int
+}
+
+typealias Products = [String: ProductsValue]

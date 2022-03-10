@@ -26,6 +26,10 @@
 		BBDC3B0327D9847300365CA6 /* mainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0227D9847300365CA6 /* mainViewModel.swift */; };
 		BBDC3B0527D9854200365CA6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0427D9854200365CA6 /* Product.swift */; };
 		BBDC3B0827DA4D5500365CA6 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0727DA4D5500365CA6 /* ProductsView.swift */; };
+		BBDC3B0A27DA73A700365CA6 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0927DA73A700365CA6 /* ProductsViewModel.swift */; };
+		BBDC3B0E27DA9B8C00365CA6 /* productRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0D27DA9B8C00365CA6 /* productRequester.swift */; };
+		BBDC3B1127DA9D6D00365CA6 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B1027DA9D6D00365CA6 /* ProductService.swift */; };
+		BBDC3B1327DAC32000365CA6 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B1227DAC32000365CA6 /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		BBDC3B0227D9847300365CA6 /* mainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewModel.swift; sourceTree = "<group>"; };
 		BBDC3B0427D9854200365CA6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		BBDC3B0727DA4D5500365CA6 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		BBDC3B0927DA73A700365CA6 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		BBDC3B0D27DA9B8C00365CA6 /* productRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productRequester.swift; sourceTree = "<group>"; };
+		BBDC3B1027DA9D6D00365CA6 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		BBDC3B1227DAC32000365CA6 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +165,8 @@
 		BB6F582727D6930500C19115 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				BBDC3B0F27DA9C9E00365CA6 /* Services */,
+				BBDC3B0B27DA9B7500365CA6 /* Requester */,
 				BBDC3AFD27D8213500365CA6 /* Codable */,
 				BBDC3AF927D8207000365CA6 /* NetworkingRequest.swift */,
 				BBDC3AFB27D820E700365CA6 /* NetworkingRequester.swift */,
@@ -204,8 +214,26 @@
 			children = (
 				BBDC3AF727D81B4900365CA6 /* itemDetailView.swift */,
 				BBDC3B0727DA4D5500365CA6 /* ProductsView.swift */,
+				BBDC3B0927DA73A700365CA6 /* ProductsViewModel.swift */,
+				BBDC3B1227DAC32000365CA6 /* ProductCell.swift */,
 			);
 			path = products;
+			sourceTree = "<group>";
+		};
+		BBDC3B0B27DA9B7500365CA6 /* Requester */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC3B0D27DA9B8C00365CA6 /* productRequester.swift */,
+			);
+			path = Requester;
+			sourceTree = "<group>";
+		};
+		BBDC3B0F27DA9C9E00365CA6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC3B1027DA9D6D00365CA6 /* ProductService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,10 +380,14 @@
 				BBDC3AFC27D820E700365CA6 /* NetworkingRequester.swift in Sources */,
 				BBDC3AF627D8190E00365CA6 /* mainView.swift in Sources */,
 				BBDC3B0127D94BA400365CA6 /* networkingProvider.swift in Sources */,
+				BBDC3B1127DA9D6D00365CA6 /* ProductService.swift in Sources */,
 				BBDC3B0327D9847300365CA6 /* mainViewModel.swift in Sources */,
+				BBDC3B0E27DA9B8C00365CA6 /* productRequester.swift in Sources */,
+				BBDC3B0A27DA73A700365CA6 /* ProductsViewModel.swift in Sources */,
 				BBDC3B0827DA4D5500365CA6 /* ProductsView.swift in Sources */,
 				BB6F580027D68BAD00C19115 /* ContentView.swift in Sources */,
 				BBDC3B0527D9854200365CA6 /* Product.swift in Sources */,
+				BBDC3B1327DAC32000365CA6 /* ProductCell.swift in Sources */,
 				BB6F57FE27D68BAD00C19115 /* easyShopperApp.swift in Sources */,
 				BBDC3AF827D81B4900365CA6 /* itemDetailView.swift in Sources */,
 			);

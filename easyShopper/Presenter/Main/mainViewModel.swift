@@ -9,5 +9,5 @@ import Combine
 
 class mainViewModel: ObservableObject {
     
-    @Published var productsInCart: [Product] = []
+    @Published var productsInCart: Products = [:]
 }
