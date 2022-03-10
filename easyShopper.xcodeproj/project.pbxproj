@@ -20,6 +20,12 @@
 		BB6F583227D69E7200C19115 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F583127D69E7200C19115 /* AppCoordinator.swift */; };
 		BBDC3AF627D8190E00365CA6 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3AF527D8190E00365CA6 /* mainView.swift */; };
 		BBDC3AF827D81B4900365CA6 /* itemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3AF727D81B4900365CA6 /* itemDetailView.swift */; };
+		BBDC3AFA27D8207000365CA6 /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3AF927D8207000365CA6 /* NetworkingRequest.swift */; };
+		BBDC3AFC27D820E700365CA6 /* NetworkingRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3AFB27D820E700365CA6 /* NetworkingRequester.swift */; };
+		BBDC3B0127D94BA400365CA6 /* networkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0027D94BA400365CA6 /* networkingProvider.swift */; };
+		BBDC3B0327D9847300365CA6 /* mainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0227D9847300365CA6 /* mainViewModel.swift */; };
+		BBDC3B0527D9854200365CA6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0427D9854200365CA6 /* Product.swift */; };
+		BBDC3B0827DA4D5500365CA6 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B0727DA4D5500365CA6 /* ProductsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		BB6F583127D69E7200C19115 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BBDC3AF527D8190E00365CA6 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
 		BBDC3AF727D81B4900365CA6 /* itemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemDetailView.swift; sourceTree = "<group>"; };
+		BBDC3AF927D8207000365CA6 /* NetworkingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequest.swift; sourceTree = "<group>"; };
+		BBDC3AFB27D820E700365CA6 /* NetworkingRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequester.swift; sourceTree = "<group>"; };
+		BBDC3B0027D94BA400365CA6 /* networkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkingProvider.swift; sourceTree = "<group>"; };
+		BBDC3B0227D9847300365CA6 /* mainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewModel.swift; sourceTree = "<group>"; };
+		BBDC3B0427D9854200365CA6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		BBDC3B0727DA4D5500365CA6 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,10 @@
 		BB6F582727D6930500C19115 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				BBDC3AFD27D8213500365CA6 /* Codable */,
+				BBDC3AF927D8207000365CA6 /* NetworkingRequest.swift */,
+				BBDC3AFB27D820E700365CA6 /* NetworkingRequester.swift */,
+				BBDC3B0027D94BA400365CA6 /* networkingProvider.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -160,6 +176,7 @@
 		BBDC3AF327D818EC00365CA6 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				BBDC3B0627DA45D300365CA6 /* products */,
 				BBDC3AF427D818F300365CA6 /* Main */,
 			);
 			path = Presenter;
@@ -169,9 +186,26 @@
 			isa = PBXGroup;
 			children = (
 				BBDC3AF527D8190E00365CA6 /* mainView.swift */,
-				BBDC3AF727D81B4900365CA6 /* itemDetailView.swift */,
+				BBDC3B0227D9847300365CA6 /* mainViewModel.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		BBDC3AFD27D8213500365CA6 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC3B0427D9854200365CA6 /* Product.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		BBDC3B0627DA45D300365CA6 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				BBDC3AF727D81B4900365CA6 /* itemDetailView.swift */,
+				BBDC3B0727DA4D5500365CA6 /* ProductsView.swift */,
+			);
+			path = products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,8 +348,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6F583227D69E7200C19115 /* AppCoordinator.swift in Sources */,
+				BBDC3AFA27D8207000365CA6 /* NetworkingRequest.swift in Sources */,
+				BBDC3AFC27D820E700365CA6 /* NetworkingRequester.swift in Sources */,
 				BBDC3AF627D8190E00365CA6 /* mainView.swift in Sources */,
+				BBDC3B0127D94BA400365CA6 /* networkingProvider.swift in Sources */,
+				BBDC3B0327D9847300365CA6 /* mainViewModel.swift in Sources */,
+				BBDC3B0827DA4D5500365CA6 /* ProductsView.swift in Sources */,
 				BB6F580027D68BAD00C19115 /* ContentView.swift in Sources */,
+				BBDC3B0527D9854200365CA6 /* Product.swift in Sources */,
 				BB6F57FE27D68BAD00C19115 /* easyShopperApp.swift in Sources */,
 				BBDC3AF827D81B4900365CA6 /* itemDetailView.swift in Sources */,
 			);

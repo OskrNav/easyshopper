@@ -14,13 +14,21 @@ final class AppCoordinator: NavigationCoordinatable {
     let stack = NavigationStack(initial: \AppCoordinator.start)
     
     @Root var start = makeMainView
-    @Route(.push) var itemDetail = makeDetailView
+    @Route(.fullScreen) var goProducts = makeProductView
+    @Route(.fullScreen) var itemDetail = makeDetailView
     
-    func makeMainView() -> some View {
-        mainView()
+    
+    @ViewBuilder func makeMainView() -> some View {
+        mainView(viewModel: .init())
     }
     
-    func makeDetailView() -> some View {
+    @ViewBuilder func makeProductView() -> some View {
+        ProductsView()
+    }
+    
+    @ViewBuilder func makeDetailView() -> some View {
         itemDetailView()
     }
+    
+    
 }
