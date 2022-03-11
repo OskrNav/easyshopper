@@ -12,6 +12,11 @@ class mainViewModel: ObservableObject {
     
     @Published var productsInCart: [Cart] = []
     
+    var totalCart: String {
+        let total = productsInCart.map({ $0.qty * $0.price}).reduce(0, +)
+        return "$\(total)"
+    }
+    
     private var cartManager: CartManager
     
     init(cartManager: CartManager) {

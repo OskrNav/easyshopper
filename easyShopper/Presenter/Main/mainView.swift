@@ -20,6 +20,8 @@ struct mainView: View {
                 emptyView
             }else {
                 cartList
+                Divider()
+                totalCart
             }
             
             Button(action: {
@@ -38,6 +40,14 @@ struct mainView: View {
             .font(.largeTitle)
     }
     
+    var totalCart: some View {
+        HStack {
+            Text("Total")
+                .bold()
+            Spacer()
+            Text("\(viewModel.totalCart)")
+        }
+    }
     var emptyView: some View {
         VStack {
             Spacer()
