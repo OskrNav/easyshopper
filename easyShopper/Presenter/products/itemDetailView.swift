@@ -8,13 +8,71 @@
 import SwiftUI
 
 struct itemDetailView: View {
+    
+    @ObservedObject var viewModel: itemDetailViewModel
+    
+    init(viewModel: itemDetailViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        Text("item detail view")
+        HStack {
+            ScrollView(.vertical) {
+                topPanelView
+                bodyPanelView
+                Button(action: {}) {
+                    Text("Add to cart")
+                }
+            }
+        }
+    }
+    
+    var topPanelView: some View {
+        VStack {
+            AsyncImage(
+                url: URL(string: viewModel.product.imageURL ),
+              content: { image in
+                  image.resizable()
+                      .aspectRatio(contentMode: .fill)
+                      .frame(maxWidth: 150, maxHeight: .infinity)
+                      .clipped()
+              },
+              placeholder: {
+                  ZStack {
+                      Image(systemName: "nosign")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 150, height: 200)
+                      ProgressView()
+                  }
+              }
+            )
+            
+            Text("\(viewModel.product.name)")
+                .font(.title2)
+            
+        }
+    }
+    
+    var bodyPanelView: some View {
+        VStack {
+            Text("\(viewModel.product.productsDescription)")
+                .font(.body)
+            HStack {
+                Text("Price:")
+                Text("$\(viewModel.product.costPrice)")
+            }
+        
+        }
+        .padding(8)
     }
 }
 
 struct itemDetailView_Previews: PreviewProvider {
+    
+    @State static var product = ProductRepresentable(barcode: "fsadf", id: "fdfa", imageURL: "fdasf", name: "fdafa", costPrice: 1, productsDescription: "dfadfadsf")
+    
     static var previews: some View {
-        itemDetailView()
+        itemDetailView(viewModel: itemDetailViewModel(product: product))
     }
 }

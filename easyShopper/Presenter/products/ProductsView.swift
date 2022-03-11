@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductsView: View {
     
+    @EnvironmentObject var router: AppCoordinator.Router
     @ObservedObject var viewModel: productsViewModel
     
     private var columns: [GridItem] = [
@@ -26,6 +27,9 @@ struct ProductsView: View {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(viewModel.products, id: \.self) { product in
                         ProductCell(product: product)
+                            .onTapGesture {
+                                router.route(to: \.itemDetail, product)
+                            }
                     }
                 }
             }

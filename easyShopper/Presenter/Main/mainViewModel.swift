@@ -9,5 +9,14 @@ import Combine
 
 class mainViewModel: ObservableObject {
     
-    @Published var productsInCart: Products = [:]
+    @Published var productsInCart: [ProductRepresentable] = []
+    
+    private var cartManager: CartManager
+    
+    init(cartManager: CartManager = CartManager()) {
+        self.cartManager = cartManager
+        self.productsInCart = cartManager.getItemInCart()
+    }
+    
+    
 }

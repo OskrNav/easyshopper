@@ -30,6 +30,7 @@ struct ProductRepresentable: Codable, Hashable {
     let imageURL: String
     let name: String
     let costPrice: Int
+    let productsDescription: String
 }
 
 typealias Products = [String: ProductsValue]

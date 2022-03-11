@@ -26,8 +26,9 @@ final class AppCoordinator: NavigationCoordinatable {
         ProductsView(viewModel: productsViewModel())
     }
     
-    @ViewBuilder func makeDetailView() -> some View {
-        itemDetailView()
+    @ViewBuilder func makeDetailView(for product: ProductRepresentable) -> some View {
+        let viewModel = itemDetailViewModel(product: product)
+        itemDetailView(viewModel: viewModel)
     }
     
     

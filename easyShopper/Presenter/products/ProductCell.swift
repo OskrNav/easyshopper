@@ -11,6 +11,7 @@ struct ProductCell: View {
     
     var product: ProductRepresentable
     
+    
     var body: some View {
         VStack {
             AsyncImage(

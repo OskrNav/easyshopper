@@ -39,6 +39,7 @@ class productsViewModel: ObservableObject {
                                                               id: $0.value.id,
                                                               imageURL: $0.value.imageURL,
                                                               name: $0.value.name,
-                                                              costPrice: $0.value.costPrice ?? 0 )}
+                                                              costPrice: $0.value.costPrice ?? 0,
+                                                              productsDescription: $0.value.productsDescription )}
     }
 }
