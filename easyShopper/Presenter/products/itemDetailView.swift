@@ -16,15 +16,18 @@ struct itemDetailView: View {
     }
     
     var body: some View {
-        HStack {
+        VStack {
             ScrollView(.vertical) {
                 topPanelView
                 bodyPanelView
-                Button(action: {}) {
+                Spacer()
+                Button(action: { viewModel.addToCart(product: viewModel.product )}) {
                     Text("Add to cart")
                 }
+                .buttonStyle(RoundedRectangleButtonStyle())
             }
         }
+        .padding()
     }
     
     var topPanelView: some View {
@@ -55,14 +58,16 @@ struct itemDetailView: View {
     }
     
     var bodyPanelView: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("\(viewModel.product.productsDescription)")
                 .font(.body)
             HStack {
                 Text("Price:")
+                    .bold()
                 Text("$\(viewModel.product.costPrice)")
+                    .bold()
             }
-        
+            .padding(.vertical, 20)
         }
         .padding(8)
     }
@@ -73,6 +78,6 @@ struct itemDetailView_Previews: PreviewProvider {
     @State static var product = ProductRepresentable(barcode: "fsadf", id: "fdfa", imageURL: "fdasf", name: "fdafa", costPrice: 1, productsDescription: "dfadfadsf")
     
     static var previews: some View {
-        itemDetailView(viewModel: itemDetailViewModel(product: product))
+        itemDetailView(viewModel: itemDetailViewModel(product: product, cartManager: CartManager()))
     }
 }

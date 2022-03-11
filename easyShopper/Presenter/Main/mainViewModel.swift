@@ -6,17 +6,22 @@
 //
 
 import Combine
+import Foundation
 
 class mainViewModel: ObservableObject {
     
-    @Published var productsInCart: [ProductRepresentable] = []
+    @Published var productsInCart: [Cart] = []
     
     private var cartManager: CartManager
     
-    init(cartManager: CartManager = CartManager()) {
+    init(cartManager: CartManager) {
         self.cartManager = cartManager
-        self.productsInCart = cartManager.getItemInCart()
+        productsInCart = cartManager.getItemInCart()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCart), name: NSNotification.Name("updateCart"), object: nil)
     }
     
+    @objc func updateCart() {
+        productsInCart = cartManager.getItemInCart()
+    }
     
 }

@@ -32,6 +32,7 @@
 		BBDC3B1327DAC32000365CA6 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B1227DAC32000365CA6 /* ProductCell.swift */; };
 		BBDC3B1527DAC57000365CA6 /* itemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B1427DAC56F00365CA6 /* itemDetailViewModel.swift */; };
 		BBDC3B1827DAD76900365CA6 /* cartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B1727DAD76900365CA6 /* cartManager.swift */; };
+		BBDC3B1C27DAFF8F00365CA6 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC3B1B27DAFF8E00365CA6 /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		BBDC3B1227DAC32000365CA6 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		BBDC3B1427DAC56F00365CA6 /* itemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemDetailViewModel.swift; sourceTree = "<group>"; };
 		BBDC3B1727DAD76900365CA6 /* cartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartManager.swift; sourceTree = "<group>"; };
+		BBDC3B1B27DAFF8E00365CA6 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDC3B0427D9854200365CA6 /* Product.swift */,
+				BBDC3B1B27DAFF8E00365CA6 /* Cart.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6F583227D69E7200C19115 /* AppCoordinator.swift in Sources */,
+				BBDC3B1C27DAFF8F00365CA6 /* Cart.swift in Sources */,
 				BBDC3AFA27D8207000365CA6 /* NetworkingRequest.swift in Sources */,
 				BBDC3B1527DAC57000365CA6 /* itemDetailViewModel.swift in Sources */,
 				BBDC3AFC27D820E700365CA6 /* NetworkingRequester.swift in Sources */,

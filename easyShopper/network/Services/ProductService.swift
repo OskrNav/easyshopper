@@ -8,6 +8,11 @@
 import Foundation
 import Combine
 
+
+protocol HasProductService {
+    var ProductService: ProductServiceType { get }
+}
+
 protocol ProductServiceType {
     func getProducts() -> AnyPublisher<Products, Error>
 }

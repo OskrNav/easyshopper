@@ -12,6 +12,7 @@ import Stinsen
 final class AppCoordinator: NavigationCoordinatable {
     
     let stack = NavigationStack(initial: \AppCoordinator.start)
+    let cart = CartManager()
     
     @Root var start = makeMainView
     @Route(.fullScreen) var goProducts = makeProductView
@@ -19,7 +20,7 @@ final class AppCoordinator: NavigationCoordinatable {
     
     
     @ViewBuilder func makeMainView() -> some View {
-        mainView(viewModel: .init())
+        mainView(viewModel: .init(cartManager: cart))
     }
     
     @ViewBuilder func makeProductView() -> some View {
@@ -27,7 +28,7 @@ final class AppCoordinator: NavigationCoordinatable {
     }
     
     @ViewBuilder func makeDetailView(for product: ProductRepresentable) -> some View {
-        let viewModel = itemDetailViewModel(product: product)
+        let viewModel = itemDetailViewModel(product: product, cartManager: cart)
         itemDetailView(viewModel: viewModel)
     }
     

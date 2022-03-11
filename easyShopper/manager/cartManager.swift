@@ -7,15 +7,27 @@
 
 import Foundation
 
-class CartManager {
+class CartManager: ObservableObject {
     
-    private var selectedItems: [ProductRepresentable] = []
+    @Published var selectedItems: [Cart] = []
     
     func setItemInCart(product: ProductRepresentable) {
-        self.selectedItems.append(product)
+        
+        if let index = selectedItems.firstIndex(where: { $0.id == product.id}) {
+            selectedItems[index].qty = selectedItems[index].qty + 1
+        }else {
+            let productCart = Cart(id: product.id, qty: 1, price: product.costPrice, name: product.name)
+            self.selectedItems.append(productCart)
+        }
     }
     
-    func getItemInCart() -> [ProductRepresentable] {
+    func getItemInCart() -> [Cart] {
         selectedItems
     }
+    
+    func removeItemInCart(item: ProductRepresentable) {
+        selectedItems = selectedItems.filter({ $0.id != item.id })
+    }
 }
+
+
